@@ -1,0 +1,11 @@
+.item {
+    grid-area: content;
+    background: red;
+    color: whitesmoke;
+    margin: 1%;
+}
+
+.item img {
+    width: 7%;
+    border-radius: 50%;
+}
