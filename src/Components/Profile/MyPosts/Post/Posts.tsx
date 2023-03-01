@@ -3,6 +3,9 @@ import styles from './Posts.module.css'
 
 export type PostsPropsType = {
     message: string
+    likeCounts: number
+    disLikeCounts: number
+
 }
 const Posts:FC<PostsPropsType> = (props) => {
     return (
@@ -12,8 +15,8 @@ const Posts:FC<PostsPropsType> = (props) => {
             />
             {props.message}
             <div>
-                <span>Like</span>
-                <span>Dislike</span>
+                <span>Like {props.likeCounts}</span>
+                <span>Dislike {props.disLikeCounts}</span>
             </div>
         </div>
     );
