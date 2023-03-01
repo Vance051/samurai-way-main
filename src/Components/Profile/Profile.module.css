@@ -1,0 +1,13 @@
+.content {
+    grid-area: content;
+    background: darkcyan;
+}
+
+
+.banner {
+    width: 80vw
+}
+
+.avatar {
+    width: 10%;
+}
