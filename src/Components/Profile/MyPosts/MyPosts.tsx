@@ -1,6 +1,8 @@
-import React from 'react';
+import React, from 'react';
 import styles from './MyPosts.module.css'
 import Posts from "./Post/Posts";
+
+
 
 const MyPosts = () => {
     return (
@@ -9,9 +11,10 @@ const MyPosts = () => {
             <textarea name="" id=""></textarea>
             <button>Add post</button>
             <button>Remove post</button>
-            <Posts />
-            <Posts />
-            <Posts />
+            <Posts message={'How are u?'}/>
+            <Posts message={'WTF?'}/>
+            <Posts message={'YO!?'}/>
+
         </div>
 
     );
