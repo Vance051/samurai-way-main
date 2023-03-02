@@ -5,27 +5,27 @@ const Navbar = () => {
         <nav className={styles.nav}>
             <ul>
                 <li>
-                    <a href="src/Components#">
+                    <a href="/profile">
                         Profile
                     </a>
                 </li>
                 <li>
-                    <a href="src/Components#">
+                    <a href="/dialogs">
                         Messages
                     </a>
                 </li>
                 <li>
-                    <a href="src/Components#">
+                    <a href="/News">
                         News
                     </a>
                 </li>
                 <li>
-                    <a href="src/Components#">
+                    <a href="/music">
                         Music
                     </a>
                 </li>
                 <li>
-                    <a href="src/Components#">
+                    <a href="/settings">
                         Settings
                     </a>
                 </li>
