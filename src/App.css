@@ -13,4 +13,9 @@
 }
 
 
+.app-wrapper-content {
+    grid-area: content;
+    background: darkcyan;
+}
+
 
