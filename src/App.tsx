@@ -18,9 +18,9 @@ function App() {
                 <Navbar/>
                 <div className={"app-wrapper-content"}>
                     {/*вместо тэга указываем имя компоненты*/}
-                    <Route path={'/dialogs'}
+                    <Route  path={'/dialogs'}
                            component={Dialogs}/>
-                    <Route path={'/profile'}
+                    <Route  path={'/profile'}
                            component={Profile}/>
                     <Route path={'/news'}
                            component={News}/>
