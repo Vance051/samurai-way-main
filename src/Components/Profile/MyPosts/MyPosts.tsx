@@ -3,7 +3,15 @@ import styles from './MyPosts.module.css'
 import Posts from "./Post/Posts";
 
 
+
 const MyPosts = () => {
+
+    let postsData = [
+        {id: 1, message: 'Hi!', likesCount:5},
+        {id: 2, message: 'HiThere', likesCount:12},
+        {id: 3, message: 'Bye', likesCount:14},
+    ]
+
     return (
         <div className={styles.postsBlock}>
             <h3>My Posts</h3>
@@ -15,9 +23,10 @@ const MyPosts = () => {
                 <button>Remove post</button>
             </div>
             <div className={styles.posts}>
-                <Posts message={'How are u?'} likeCounts={5} disLikeCounts={10}/>
-                <Posts message={'WTF?'} likeCounts={20} disLikeCounts={500}/>
-                <Posts message={'YO!?'} likeCounts={25} disLikeCounts={1}/>
+                <Posts message={postsData[0].message} likeCounts={postsData[0].likesCount}/>
+
+
+
             </div>
 
         </div>
