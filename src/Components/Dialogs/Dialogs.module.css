@@ -7,13 +7,16 @@
     padding: 10px;
 }
 
-.dialogsItem  .active {
-    color: coral;
+
+.dialogsItem a.activeLink {
+    color: orangered;
 }
 
-
-.messages {
+a{
+    text-decoration: none;
+    color: white;
 }
-
-.message {
+.massages {
+    padding: 10px;
+    background: bisque;
 }

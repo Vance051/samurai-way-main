@@ -13,7 +13,7 @@ export const DialogItem: FC<DialogItemType> = (props) => {
     return (
         <div className={`${styles.dialog} ${styles.active}`}>
             <div className={styles.dialog}>
-                <NavLink to={path}>{props.name}</NavLink>
+                <NavLink activeClassName={styles.activeLink} to={path}>{props.name}</NavLink>
             </div>
         </div>
     )
