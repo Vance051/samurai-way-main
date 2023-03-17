@@ -7,9 +7,6 @@ type DialogItemType = {
     id: number
 
 }
-type MessageType = {
-    message: string
-}
 
 export const DialogItem: FC<DialogItemType> = (props) => {
     let path = `/dialogs/${props.id}`
@@ -22,9 +19,3 @@ export const DialogItem: FC<DialogItemType> = (props) => {
     )
 }
 
-export const Message: FC<MessageType> = (props) => {
-    return (
-        <div className={styles.message}>{props.message}</div>
-
-    )
-}
