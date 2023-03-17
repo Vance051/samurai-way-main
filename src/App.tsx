@@ -3,14 +3,20 @@ import './App.css';
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Profile/Profile";
-import Footer from "./Components/Footer/Footer";
 import Dialogs from "./Components/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 import Music from "./Components/Music/Music";
 import News from "./Components/News/News";
 import Settings from "./Components/Settings/Settings";
+import {DialogsDataType, MessagesDataType, PostsDataType} from "./index";
 
-function App() {
+type AppType = {
+    messagesData: MessagesDataType
+    dialogsData: DialogsDataType
+    postsData: PostsDataType
+}
+
+function App(props: AppType) {
     return (
         <BrowserRouter>
             <div className="app-wrapper">
@@ -18,20 +24,24 @@ function App() {
                 <Navbar/>
                 <div className={"app-wrapper-content"}>
                     {/*вместо тэга указываем имя компоненты*/}
-                    <Route  path={'/dialogs'}
-                           component={Dialogs}/>
-                    <Route  path={'/profile'}
-                           component={Profile}/>
+                    <Route path={'/dialogs'}
+                           render={() => <Dialogs
+                               messagesData={props.messagesData}
+                               dialogsData={props.dialogsData}
+                           />}
+                    />
+                    <Route path={'/profile'}
+                           render={() => <Profile
+                               postsData={props.postsData}/>}/>
                     <Route path={'/news'}
-                           component={News}/>
+                           render={() => <News/>}/>
 
                     <Route path={'/music'}
-                           component={Music}/>
+                           render={() => <Music/>}/>
 
                     <Route path={'/settings'}
-                           component={Settings}/>
+                           render={() => <Settings/>}/>
                 </div>
-
             </div>
         </BrowserRouter>
     );
