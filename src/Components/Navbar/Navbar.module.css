@@ -15,3 +15,8 @@ li {
 .item a.activeLink {
     color: orangered;
 }
+
+.wrap {
+    display: flex;
+
+}

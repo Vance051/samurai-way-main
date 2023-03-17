@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './MyPosts.module.css'
 import Posts from "./Post/Posts";
-import {PostsDataType} from "../../../index";
+import {PostType} from "../../../redux/state";
+
 
 type MyPostsType ={
-    postsData:PostsDataType
+    postsData:PostType[]
 }
 
 const MyPosts = (props:MyPostsType) => {
@@ -26,9 +27,6 @@ const MyPosts = (props:MyPostsType) => {
             <div className={styles.posts}>
                 {/*<Posts message={postsData[0].message} likeCounts={postsData[0].likesCount}/>*/}
                 {postsElements}
-
-
-
             </div>
 
         </div>

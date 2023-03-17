@@ -1,0 +1,9 @@
+
+.friend {
+    display: flex;
+    flex-direction: column;
+}
+.friend img {
+    border-radius: 50%;
+    width: 45%;
+}
