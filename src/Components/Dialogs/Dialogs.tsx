@@ -7,6 +7,11 @@ type DialogType = {
     id: number
 }
 type DialogsDataType = Array<DialogType>
+type MessageType = {
+    id:number
+    message:string
+}
+type MessagesDataType= MessageType[]
 let dialogsData: DialogsDataType = [
     {id: 1, name: 'User1'},
     {id: 2, name: 'User2'},
@@ -15,7 +20,8 @@ let dialogsData: DialogsDataType = [
     {id: 5, name: 'User5'},
     {id: 6, name: 'User6'},
 ]
-let messagesData = [
+
+let messagesData:MessagesDataType = [
     {id: 1, message: 'Hi!'},
     {id: 2, message: 'HiThere'},
     {id: 3, message: 'Bye'},
@@ -26,17 +32,21 @@ let messagesData = [
 
 
 const Dialogs = () => {
+ let dialogsElements = dialogsData.map(dialog=><DialogItem key={dialog.id} name={dialog.name} id={dialog.id}/>)
+let messagesElements = messagesData.map(message=><Message message={message.message}/>)
+
     return (
         <div className={styles.dialogs}>
             <div className={styles.dialogsItem}>
-                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>
-                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>
-
+               {/* <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>
+                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>*/}
+                {/*{dialogsData.map(dialog=><DialogItem name={dialog.name} id={dialog.id}/>)}*/}
+                {dialogsElements}
             </div>
             <div className={styles.massages}>
-                <Message message={messagesData[0].message}/>
-                <Message message={messagesData[1].message}/>
-
+               {/* <Message message={messagesData[0].message}/>
+                <Message message={messagesData[1].message}/>*/}
+                {messagesElements}
             </div>
         </div>
     );
