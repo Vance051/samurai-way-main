@@ -17,7 +17,7 @@ const MyPosts = (props: MyPostsType) => {
     let newPostElement = React.createRef<HTMLTextAreaElement>()
     const onButtonClickHandler = () => {
         let text = newPostElement.current?.value
-        props.addPost(text ? text : '')
+        props.addPost(text ? text : '');
     }
     return (
 

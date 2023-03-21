@@ -1,3 +1,5 @@
+import {rerenderIntierTree} from "../render";
+
 export type MessageType = {
     id: number
     message: string
@@ -72,8 +74,9 @@ export let state: StateType = {
     ]
 }
 
-export type AddPostType = (postMassage:string) =>void
-export const addPost:AddPostType = (postMassage) => {
+export type AddPostType = (postMassage: string) => void
+export const addPost: AddPostType = (postMassage) => {
     let newPost: PostType = {id: new Date().getDate(), message: postMassage, likesCount: 23}
     state.profilePage.postsData.push(newPost)
+    rerenderIntierTree(state)
 }
