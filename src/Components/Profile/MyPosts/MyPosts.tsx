@@ -1,22 +1,23 @@
 import React from 'react';
 import styles from './MyPosts.module.css'
 import Posts from "./Post/Posts";
-import {PostType} from "../../../redux/state";
+import {AddPostType, PostType} from "../../../redux/state";
 
 
 type MyPostsType = {
     postsData: PostType[]
+    addPost: AddPostType
 }
 
 const MyPosts = (props: MyPostsType) => {
 
     let postsElements =
-        props.postsData.map(post => <Posts message={post.message} likeCounts={post.likesCount}/>)
+        props.postsData.map(post => <Posts key={post.id} message={post.message} likeCounts={post.likesCount}/>)
 
     let newPostElement = React.createRef<HTMLTextAreaElement>()
     const onButtonClickHandler = () => {
         let text = newPostElement.current?.value
-        alert(text)
+        props.addPost(text ? text : '')
     }
     return (
 

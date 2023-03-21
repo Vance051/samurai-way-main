@@ -20,9 +20,11 @@ let newText = React.createRef<HTMLTextAreaElement>()
                 {dialogsElements}
             </div>
             <div className={styles.massages}>
-                <textarea ref={newText} ></textarea>
                 {messagesElements}
-                <button onClick={onClickHandler}>++++++++</button>
+                <textarea ref={newText} ></textarea>
+                <div>
+                    <button onClick={onClickHandler}>++++++++</button>
+                </div>
             </div>
         </div>
     );

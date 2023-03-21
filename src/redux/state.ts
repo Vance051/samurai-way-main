@@ -71,3 +71,9 @@ export let state: StateType = {
         },
     ]
 }
+
+export type AddPostType = (postMassage:string) =>void
+export const addPost:AddPostType = (postMassage) => {
+    let newPost: PostType = {id: new Date().getDate(), message: postMassage, likesCount: 23}
+    state.profilePage.postsData.push(newPost)
+}

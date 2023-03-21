@@ -8,10 +8,11 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Music from "./Components/Music/Music";
 import News from "./Components/News/News";
 import Settings from "./Components/Settings/Settings";
-import {StateType} from "./redux/state";
+import {AddPostType, StateType} from "./redux/state";
 
 type AppType = {
     state: StateType
+    addPost: AddPostType
 }
 
 function App(props: AppType) {
@@ -33,6 +34,7 @@ function App(props: AppType) {
                            render={
                                () => <Profile
                                    postsData={props.state.profilePage.postsData}
+                                   addPost ={props.addPost}
                                />
                            }
                     />
