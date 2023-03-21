@@ -10,14 +10,19 @@ type DialogsPropType = {
 const Dialogs = (props: DialogsPropType) => {
     let dialogsElements = props.state.dialogsData.map(dialog => <DialogItem key={dialog.id} name={dialog.name} id={dialog.id}/>)
     let messagesElements = props.state.messagesData.map(message => <Message message={message.message}/>)
-
+let newText = React.createRef<HTMLTextAreaElement>()
+    const onClickHandler = () => {
+      alert(newText.current?.value)
+    }
     return (
         <div className={styles.dialogs}>
             <div className={styles.dialogsItem}>
                 {dialogsElements}
             </div>
             <div className={styles.massages}>
+                <textarea ref={newText} ></textarea>
                 {messagesElements}
+                <button onClick={onClickHandler}>++++++++</button>
             </div>
         </div>
     );
