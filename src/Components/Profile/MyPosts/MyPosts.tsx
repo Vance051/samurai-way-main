@@ -18,6 +18,7 @@ const MyPosts = (props: MyPostsType) => {
     const onButtonClickHandler = () => {
         let text = newPostElement.current?.value
         props.addPost(text ? text : '');
+        if (newPostElement.current) { newPostElement.current.value= ''}
     }
     return (
 

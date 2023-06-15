@@ -8,7 +8,7 @@ type NavBarType = {
     state: FriendsType[]
 }
 const Navbar = (props: NavBarType) => {
-    let friend = props.state.map(f => <Friends img={f.img} name={f.name}/>)
+    let friend = props.state.map(f => <Friends key={f.name} img={f.img} name={f.name}/>)
     return (
         <nav className={styles.nav}>
             <ul>

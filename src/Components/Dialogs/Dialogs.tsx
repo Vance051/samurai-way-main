@@ -23,7 +23,7 @@ let newText = React.createRef<HTMLTextAreaElement>()
                 {messagesElements}
                 <textarea ref={newText} ></textarea>
                 <div>
-                    <button onClick={onClickHandler}>++++++++</button>
+                    <button onClick={onClickHandler}>ADD MESSAGES</button>
                 </div>
             </div>
         </div>
